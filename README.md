@@ -1,5 +1,5 @@
 # MaximumIndependentSet.jl
-Julia wrapper of Ioannis Papatsoris's C++ implementation of Xiao and Nagamochi [xiao_nagamochi_2017](https://doi.org/10.1016/j.ic.2017.06.001) for the Maximum Independent Set Problem.
+Julia wrapper of Ioannis Papatsoris's C++ implementation of [Xiao and Nagamochi (2017)](https://doi.org/10.1016/j.ic.2017.06.001) for the Maximum Independent Set Problem.
 
 ## Minimal example
 ```julia
