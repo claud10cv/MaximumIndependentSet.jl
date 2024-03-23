@@ -1,5 +1,5 @@
-function max_indep_set(g::SimpleGraph)
-    sol = []
+function max_indep_set(g::SimpleGraph)::Vector{Int64}
+    sol = Int64[]
     CC = connected_components(g)
     for c in CC
         gc, vmap = induced_subgraph(g, c)
