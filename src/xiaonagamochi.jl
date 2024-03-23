@@ -1,4 +1,4 @@
-function max_indep_set(g::SimpleGraph)::Vector{Int64}
+function mis_xiao_nagamochi(g::SimpleGraph)::Tuple{Int64, Vector{Int64}}
     sol = Int64[]
     CC = connected_components(g)
     for c in CC
@@ -13,5 +13,5 @@ function max_indep_set(g::SimpleGraph)::Vector{Int64}
             union!(sol, vmap[sol_c])
         end
     end
-    return sol
+    return 0, sol
 end
