@@ -1,7 +1,7 @@
 name = "MaximumIndependentSet"
 uuid = "9e812ceb-42a3-473a-b295-b8bb2099a8ce"
 authors = ["Claudio Contardo <claudio.contardo@concordia.ca>"]
-version = "0.1.2"
+version = "0.1.3"
 
 [deps]
 CutBranching_jll = "a275e4ba-a8a9-5328-a18a-85c73bd42860"
