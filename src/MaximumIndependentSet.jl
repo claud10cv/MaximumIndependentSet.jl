@@ -4,12 +4,12 @@ module MaximumIndependentSet
     using JuMP
     using MathOptInterface
     using GLPK
-
+        
     const MOI = MathOptInterface
     
     module XiaoNagamochi
-        using CxxWrap
         using MaximumIndependentSet_jll
+        using CxxWrap
         @wrapmodule () -> joinpath("", "libmis")
         function __init__()
             @initcxx
@@ -17,8 +17,8 @@ module MaximumIndependentSet
     end
 
     module CutBranching
-        using CxxWrap
         using CutBranching_jll
+        using CxxWrap
         @wrapmodule () -> joinpath("", "libmiscb")
         function __init__()
             @initcxx
@@ -34,7 +34,7 @@ module MaximumIndependentSet
     @setup_workload begin
         for seed in 1:2
             g = random_regular_graph(20, 5; seed = seed)
-                @compile_workload begin
+            @compile_workload begin
                 redirect_stdout(devnull) do
                     mis_heuristic(g)
                     mis_mip(g; time_limit = 5)

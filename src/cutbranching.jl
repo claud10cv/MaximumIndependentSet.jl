@@ -22,7 +22,7 @@ function mis_cut_branching_connected(g::SimpleGraph)::Tuple{Int64, Vector{Int64}
         _src = [Int32(src(e)) for e in edges(g)]
         _dst = [Int32(dst(e)) for e in edges(g)]
         _sol = zeros(Int32, nv(g))
-        MaximumIndependentSet.CutBranching.max_indep_set(_src, _dst, _sol)
+        CutBranching.max_indep_set(_src, _dst, _sol)
         sol = [v for v in 1:nv(g) if _sol[v] == 1]
         return 0, sol
     else
