@@ -9,8 +9,7 @@ module MaximumIndependentSet
     
     module XiaoNagamochi
         using MaximumIndependentSet_jll
-        using CxxWrap
-        @wrapmodule () -> joinpath("", "libmis")
+        @wrapmodule MaximumIndependentSet_jll.get_mis_path
         function __init__()
             @initcxx
         end
@@ -18,8 +17,7 @@ module MaximumIndependentSet
 
     module CutBranching
         using CutBranching_jll
-        using CxxWrap
-        @wrapmodule () -> joinpath("", "libmiscb")
+        @wrapmodule CutBranching_jll.get_miscb_path
         function __init__()
             @initcxx
         end
