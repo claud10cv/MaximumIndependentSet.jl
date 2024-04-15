@@ -8,6 +8,7 @@ module MaximumIndependentSet
     const MOI = MathOptInterface
     
     module XiaoNagamochi
+        using CxxWrap
         using MaximumIndependentSet_jll
         @wrapmodule MaximumIndependentSet_jll.get_mis_path
         function __init__()
@@ -16,6 +17,7 @@ module MaximumIndependentSet
     end
 
     module CutBranching
+        using CxxWrap
         using CutBranching_jll
         @wrapmodule CutBranching_jll.get_miscb_path
         function __init__()
