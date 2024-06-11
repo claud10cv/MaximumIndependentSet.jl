@@ -14,7 +14,7 @@ MaximumIndependentSet_jll = "84ef374a-9d6e-5be7-91be-6cf66a2d5e4c"
 PrecompileTools = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
 
 [compat]
-CxxWrap = "0.15"
+CxxWrap = "0.15, 0.16"
 GLPK = "1"
 Graphs = "1"
 JuMP = "1"
@@ -23,8 +23,8 @@ PrecompileTools = "1"
 julia = "1.7"
 
 [extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
 test = ["Random", "Test"]
